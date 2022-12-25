@@ -12,12 +12,12 @@ function onGeneratePromise(e) {
     elements: { delay, step, amount },
   } = e.currentTarget;
 
-  let fisrstDelay = Number(delay.value);
+  let firstDelay = Number(delay.value);
   let delayStep = Number(step.value);
   let quantity = Number(amount.value);
 
   for (let i = 0; i < quantity; i += 1) {
-    const delay = fisrstDelay + delayStep * i;
+    const delay = firstDelay + delayStep * i;
     let position = i + 1;
     createPromise(position, delay).then(onSuccess).catch(onError);
   }
